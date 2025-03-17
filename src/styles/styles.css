@@ -60,8 +60,14 @@ body {
   height: 36px;
   margin-bottom: 20px;
   padding: 6px 7px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
   border: 1px solid #666666;
   border-radius: 4px;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 @media (max-width: 576px) {
   .form-page__field {
@@ -75,6 +81,16 @@ body {
   letter-spacing: 0;
   color: #999999;
 }
+.form-page__field:hover {
+  border-color: #333333;
+}
+.form-page__field:disabled {
+  background-color: #666666;
+}
+.form-page__field[data-error] {
+  border-color: #E90000;
+  background-color: rgba(233, 0, 0, 0.2);
+}
 .form-page__submit-button {
   height: 64px;
   padding: 0 24px;
@@ -86,6 +102,22 @@ body {
   background-color: #000000;
   border-radius: 16px;
   border: unset;
+  transition: background-color 0.2s, transform 0.1s, opacity 0.2s;
+}
+.form-page__submit-button:hover {
+  background-color: #333333;
+}
+.form-page__submit-button:active {
+  transform: scale(0.95);
+}
+.form-page__submit-button:disabled {
+  opacity: 0.8;
+}
+.form-page__submit-button[data-success] {
+  background-color: #28906f;
+}
+.form-page__submit-button[data-success]:hover {
+  background-color: #21624a;
 }
 
 /*# sourceMappingURL=styles.css.map */
